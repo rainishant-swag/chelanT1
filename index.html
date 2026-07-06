@@ -15,6 +15,7 @@
             --text-light: #666666;
             --highlight: #fff3cd;
             --highlight-border: #ffeba0;
+            --ev-color: #0088cc;
         }
 
         * {
@@ -72,6 +73,10 @@
             border-top: 4px solid var(--primary);
         }
 
+        .card.ev-card {
+            border-top: 4px solid var(--ev-color);
+        }
+
         .card h2 {
             color: var(--primary);
             font-size: 1.4rem;
@@ -79,6 +84,10 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+
+        .card.ev-card h2 {
+            color: var(--ev-color);
         }
 
         .store-list {
@@ -107,6 +116,15 @@
 
         .badge {
             background-color: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .ev-badge {
+            background-color: var(--ev-color);
             color: white;
             font-size: 0.75rem;
             padding: 0.1rem 0.4rem;
@@ -187,6 +205,10 @@
             border: 3px solid var(--card-bg);
         }
 
+        .timeline-marker.ev-marker {
+            background: var(--ev-color);
+        }
+
         .timeline-time {
             font-weight: bold;
             color: var(--primary);
@@ -249,7 +271,7 @@
 
     <header>
         <h1>Lake Chelan Family Weekend</h1>
-        <p>Friday Check-In to Monday Check-Out • Staying at 255 Porcupine Lane</p>
+        <p>Friday Check-In to Monday Check-Out • Tesla Model Y Road Trip</p>
     </header>
 
     <div class="container">
@@ -264,39 +286,32 @@
                 </p>
             </div>
 
+            <!-- EV Charging Card -->
+            <div class="card ev-card">
+                <h2>⚡ Pitstop Supercharger</h2>
+                <p><strong>Cle Elum Supercharger (V3 - 250kW)</strong></p>
+                <p class="store-meta"><strong>Address:</strong> 808 W Davis St, Cle Elum, WA 98922</p>
+                <p class="store-meta" style="margin-top: 0.5rem; color: var(--text-dark);">
+                    Perfect middle-ground stretch point for your Model Y Long Range starting at 80%. Located at Gravity Coffee with a drive-thru, clean restrooms, and open walking space for the kids to stretch out.
+                </p>
+            </div>
+
             <!-- Grocery Stores Card -->
             <div class="card">
-                <h2>🛒 Nearby Grocery Stores</h2>
+                <h2>🛒 Grocery & Dining</h2>
                 <ul class="store-list">
                     <li class="store-item">
-                        <div class="store-name">Safeway</div>
-                        <div class="store-meta">106 W Manson Rd • 1.9 miles (~5 mins)</div>
-                        <div class="store-meta">Standard supermarket chain featuring a large bakery, produce, and full deli.</div>
+                        <div class="store-name">Safeway <span class="store-meta">(1.9 mi)</span></div>
+                        <div class="store-meta">106 W Manson Rd • Standard groceries & deli items.</div>
                     </li>
                     <li class="store-item">
-                        <div class="store-name">Chelan Market Fresh</div>
-                        <div class="store-meta">310 W Manson Hwy • 2.1 miles (~6 mins)</div>
-                        <div class="store-meta">Excellent localized grocery store with great produce and quality meats.</div>
+                        <div class="store-name">Twisted Cork & Taphouse <span class="badge">Indian Menu</span></div>
+                        <div class="store-meta">116 S Emerson St • 1.8 miles away. Offers a fantastic authentic Indian menu alongside a kids' food menu.</div>
                     </li>
                 </ul>
                 <div class="pro-tip">
-                    <strong>💡 Indian Grocery Note:</strong> There are no physical Indian grocery stores in the mountain resort town of Chelan. Be sure to pack your preferred specialty items, spices, or dals from Bellevue before you start your drive at 1:00 PM!
+                    <strong>💡 Indian Grocery Note:</strong> There are no physical Indian grocery stores in Chelan. Pack your preferred specialty spices or dals from Bellevue before departing at 1:00 PM!
                 </div>
-            </div>
-
-            <!-- Dining Card -->
-            <div class="card">
-                <h2>🍽️ Nearby Indian Dining</h2>
-                <ul class="store-list">
-                    <li class="store-item">
-                        <div class="store-name">Twisted Cork & Taphouse <span class="badge">Family Friendly</span></div>
-                        <div class="store-meta"><strong>Address:</strong> 116 S Emerson St, Chelan, WA 98816</div>
-                        <div class="store-meta"><strong>Distance:</strong> ~1.8 miles (~4 minute drive from basecamp)</div>
-                        <div class="store-meta" style="margin-top: 0.4rem; color: var(--text-dark);">
-                            A local favorite that features an authentic, comprehensive <strong>Indian Cuisine Menu</strong> (Butter Chicken, Biryani, Tikka Masala, and Garlic Naan) paired seamlessly with a standard American pub and kids' menu. Perfect for family flexibility.
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
 
@@ -312,12 +327,20 @@
                     <div class="timeline-time">1:00 PM</div>
                     <div class="timeline-content">
                         <h4>Departure from Bellevue</h4>
-                        <p>Hit the road early Friday afternoon via I-90 E to beat the weekend traffic rush. Head over Snoqualmie Pass and transition up onto US-97 N.</p>
+                        <p>Depart early Friday afternoon via I-90 E with your Model Y Long Range charged up to 80%. Enjoy the scenic ascent up Snoqualmie Pass.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker ev-marker"></div>
+                    <div class="timeline-time">2:15 PM</div>
+                    <div class="timeline-content">
+                        <h4>⚡ EV Charging & Stretch in Cle Elum (808 W Davis St)</h4>
+                        <p>Pull into the V3 Supercharger station. Take a 15-minute break to stretch, grab a quick drink at Gravity Coffee, and top your battery back up comfortably to cruise over to Chelan.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-time">4:30 PM</div>
+                    <div class="timeline-time">4:45 PM</div>
                     <div class="timeline-content">
                         <h4>Check-in & Quick Grocery Restock</h4>
                         <p>Arrive at 255 Porcupine Lane to check into your vacation rental. Swing by Safeway or Chelan Market Fresh to pick up breakfast foods, milk, and snacks for the kids.</p>
@@ -332,8 +355,8 @@
                     </div>
                 </div>
             </div>
-            <a href="https://maps.google.com/?daddr=255+Porcupine+Lane,+Chelan,+WA+98816+to:106+W+Manson+Rd,+Chelan,+WA+98816+to:117+E+Wapato+Ave,+Chelan,+WA+98816" target="_blank" class="map-btn">
-                🗺️ View Friday Map & Driving Directions
+            <a href="https://maps.google.com/?saddr=Bellevue,+WA&daddr=808+W+Davis+St,+Cle+Elum,+WA+98922+to:255+Porcupine+Lane,+Chelan,+WA+98816+to:106+W+Manson+Rd,+Chelan,+WA+98816+to:117+E+Wapato+Ave,+Chelan,+WA+98816" target="_blank" class="map-btn">
+                🗺️ View Friday Map & Driving Directions (Via Supercharger)
             </a>
         </div>
 
@@ -423,7 +446,7 @@
                     <div class="timeline-time">11:00 AM</div>
                     <div class="timeline-content">
                         <h4>Check-out of Rental Basecamp</h4>
-                        <p>Finish packing bags, load up the car, and check out of 255 Porcupine Lane right at 11:00 AM.</p>
+                        <p>Finish packing bags, load up the car, and check out of 255 Porcupine Lane right at 11:00 AM. Ensure your Model Y is prepped with an 80% charge baseline.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -435,11 +458,11 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-time">1:30 PM</div>
+                    <div class="timeline-marker ev-marker"></div>
+                    <div class="timeline-time">3:15 PM</div>
                     <div class="timeline-content">
-                        <h4>Departure from Lake Chelan</h4>
-                        <p>Begin the drive back over the Cascade passes towards King County, hitting the highway when the kids are ready for an afternoon nap.</p>
+                        <h4>⚡ EV Top-up Stop in Cle Elum (808 W Davis St)</h4>
+                        <p>Stop over at the Cle Elum V3 supercharger again to give everyone a quick legs stretch, washroom break, and ensure you drop back down into Bellevue with tons of battery buffer.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -451,8 +474,8 @@
                     </div>
                 </div>
             </div>
-            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=Bellevue,+WA" target="_blank" class="map-btn">
-                🗺️ View Monday Map & Return Directions
+            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=808+W+Davis+St,+Cle+Elum,+WA+98922+to:Bellevue,+WA" target="_blank" class="map-btn">
+                🗺️ View Monday Map & Return Directions (Via Supercharger)
             </a>
         </div>
 
