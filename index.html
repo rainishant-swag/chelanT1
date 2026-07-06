@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Trip to Lake Chelan - 3-Day Itinerary</title>
+    <title>Family Trip to Lake Chelan - 4-Day Weekend Itinerary</title>
     <style>
         :root {
             --primary: #1e3d59;
@@ -13,6 +13,8 @@
             --card-bg: #ffffff;
             --text-dark: #333333;
             --text-light: #666666;
+            --highlight: #fff3cd;
+            --highlight-border: #ffeba0;
         }
 
         * {
@@ -50,14 +52,14 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 1rem 3rem 1rem;
         }
 
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
@@ -98,12 +100,34 @@
         .store-name {
             font-weight: bold;
             color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .badge {
+            background-color: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
         .store-meta {
             font-size: 0.9rem;
             color: var(--text-light);
             margin-top: 0.2rem;
+        }
+
+        .pro-tip {
+            background-color: var(--highlight);
+            border: 1px solid var(--highlight-border);
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+            color: #664d03;
         }
 
         .day-section {
@@ -224,8 +248,8 @@
 <body>
 
     <header>
-        <h1>Lake Chelan Family Getaway</h1>
-        <p>3-Day Easy-Going Itinerary • Staying at 255 Porcupine Lane</p>
+        <h1>Lake Chelan Family Weekend</h1>
+        <p>Friday Check-In to Monday Check-Out • Staying at 255 Porcupine Lane</p>
     </header>
 
     <div class="container">
@@ -236,7 +260,7 @@
                 <h2>📍 Trip Basecamp</h2>
                 <p><strong>Address:</strong><br>255 Porcupine Lane<br>Chelan, WA 98816</p>
                 <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-light);">
-                    Located inside <em>The Lookout at Lake Chelan</em> community, featuring neighborhood parks, playgrounds, pools, and easy beach access.
+                    Located inside <em>The Lookout at Lake Chelan</em> community. Enjoy community parks, shared pools, and kid-friendly walking trails right outside your door.
                 </p>
             </div>
 
@@ -247,22 +271,30 @@
                     <li class="store-item">
                         <div class="store-name">Safeway</div>
                         <div class="store-meta">106 W Manson Rd • 1.9 miles (~5 mins)</div>
-                        <div class="store-meta">Full-service bakery, deli, and large produce section.</div>
+                        <div class="store-meta">Standard supermarket chain featuring a large bakery, produce, and full deli.</div>
                     </li>
                     <li class="store-item">
                         <div class="store-name">Chelan Market Fresh</div>
                         <div class="store-meta">310 W Manson Hwy • 2.1 miles (~6 mins)</div>
-                        <div class="store-meta">Excellent localized options, quality meats, and regional wines.</div>
+                        <div class="store-meta">Excellent localized grocery store with great produce and quality meats.</div>
                     </li>
+                </ul>
+                <div class="pro-tip">
+                    <strong>💡 Indian Grocery Note:</strong> There are no physical Indian grocery stores in the mountain resort town of Chelan. Be sure to pack your preferred specialty items, spices, or dals from Bellevue before you start your drive at 1:00 PM!
+                </div>
+            </div>
+
+            <!-- Dining Card -->
+            <div class="card">
+                <h2>🍽️ Nearby Indian Dining</h2>
+                <ul class="store-list">
                     <li class="store-item">
-                        <div class="store-name">Bear Foods Natural Market</div>
-                        <div class="store-meta">125 E Woodin Ave • 1.3 miles (~4 mins)</div>
-                        <div class="store-meta">Great for organic snacks, specialty items, and grab-and-go options.</div>
-                    </li>
-                    <li class="store-item">
-                        <div class="store-name">Walmart Supercenter</div>
-                        <div class="store-meta">108 N Apple Blossom Dr • 4.0 miles (~10 mins)</div>
-                        <div class="store-meta">Best for stocking up on bulk items, beach gear, or extra sunblock.</div>
+                        <div class="store-name">Twisted Cork & Taphouse <span class="badge">Family Friendly</span></div>
+                        <div class="store-meta"><strong>Address:</strong> 116 S Emerson St, Chelan, WA 98816</div>
+                        <div class="store-meta"><strong>Distance:</strong> ~1.8 miles (~4 minute drive from basecamp)</div>
+                        <div class="store-meta" style="margin-top: 0.4rem; color: var(--text-dark);">
+                            A local favorite that features an authentic, comprehensive <strong>Indian Cuisine Menu</strong> (Butter Chicken, Biryani, Tikka Masala, and Garlic Naan) paired seamlessly with a standard American pub and kids' menu. Perfect for family flexibility.
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -271,8 +303,8 @@
         <!-- Day 1 Plan -->
         <div class="day-section">
             <div class="day-header">
-                <div class="day-title">Day 1: Arrival & Evening Stroll</div>
-                <div class="day-subtitle">Road Trip & Settle In</div>
+                <div class="day-title">Day 1 (Friday): Arrival & Settle In</div>
+                <div class="day-subtitle">Road Trip</div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
@@ -280,35 +312,35 @@
                     <div class="timeline-time">1:00 PM</div>
                     <div class="timeline-content">
                         <h4>Departure from Bellevue</h4>
-                        <p>Hit the road via I-90 E, passing through Snoqualmie Pass, and transitioning onto US-97 N. Enjoy a scenic, low-stress drive with the kids.</p>
+                        <p>Hit the road early Friday afternoon via I-90 E to beat the weekend traffic rush. Head over Snoqualmie Pass and transition up onto US-97 N.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">4:30 PM</div>
                     <div class="timeline-content">
-                        <h4>Check-in & Grocery Run</h4>
-                        <p>Arrive at 255 Porcupine Lane. While stretching out and unpacking, take a quick 5-minute drive to Safeway or Chelan Market Fresh to stock up on snacks and weekend essentials.</p>
+                        <h4>Check-in & Quick Grocery Restock</h4>
+                        <p>Arrive at 255 Porcupine Lane to check into your vacation rental. Swing by Safeway or Chelan Market Fresh to pick up breakfast foods, milk, and snacks for the kids.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">6:30 PM</div>
                     <div class="timeline-content">
-                        <h4>Chelan Riverwalk Park</h4>
-                        <p>Head to 117 E Wapato Ave. A flat, paved 1-mile loop trail along the water—perfect for letting the kids run around, stretch their legs, and enjoy the sunset scenery.</p>
+                        <h4>Sunset Walk at Chelan Riverwalk Park</h4>
+                        <p>Head to 117 E Wapato Ave. Stretch your legs on a beautiful, flat 1-mile loop trail along the river. Great fields for the kids to run around on after the drive.</p>
                     </div>
                 </div>
             </div>
             <a href="https://maps.google.com/?daddr=255+Porcupine+Lane,+Chelan,+WA+98816+to:106+W+Manson+Rd,+Chelan,+WA+98816+to:117+E+Wapato+Ave,+Chelan,+WA+98816" target="_blank" class="map-btn">
-                🗺️ View Day 1 Map & Driving Directions
+                🗺️ View Friday Map & Driving Directions
             </a>
         </div>
 
         <!-- Day 2 Plan -->
         <div class="day-section">
             <div class="day-header">
-                <div class="day-title">Day 2: Slidewaters Splash Day</div>
+                <div class="day-title">Day 2 (Saturday): Slidewaters Water Park</div>
                 <div class="day-subtitle">Full Day Adventure</div>
             </div>
             <div class="timeline">
@@ -316,8 +348,8 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">9:30 AM</div>
                     <div class="timeline-content">
-                        <h4>Prep for the Waterpark</h4>
-                        <p>Lather on the first layer of sunscreen, pack your towels, water shoes, and change of clothes.</p>
+                        <h4>Pack the Beach Bags</h4>
+                        <p>Get the kids ready with sunblock, water shoes, and towels for a high-energy day at the park.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -325,72 +357,109 @@
                     <div class="timeline-time">10:00 AM</div>
                     <div class="timeline-content">
                         <h4>Slidewaters (102 Waterslide Dr)</h4>
-                        <p>Arrive right at opening to grab a good spot! Experience a world-class water park featuring a lazy river, kid-friendly play zones, tube slides, and stunning views overlooking the lake. Concessions and lockers are available on-site.</p>
+                        <p>Spend the day enjoying the massive water park overlooking the lake. Features an incredible lazy river, safety-first splash zones for younger children, and thrilling tube slides. Rent a locker on-site or grab snacks at the concession stands.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-time">5:00 PM</div>
+                    <div class="timeline-time">5:30 PM</div>
                     <div class="timeline-content">
-                        <h4>Return & Relax</h4>
-                        <p>Head back to the house to dry off, change, and unwind. Enjoy a casual family dinner at the house or walk around the community pool and pocket parks inside The Lookout.</p>
+                        <h4>Dinner at Twisted Cork & Taphouse</h4>
+                        <p>Head downtown to 116 S Emerson St. After a big swimming day, enjoy premium Indian dishes like Tikka Masala or Samosas, while keeping things simple for the kids with their dedicated kids' menu selections.</p>
                     </div>
                 </div>
             </div>
-            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=102+Waterslide+Dr,+Chelan,+WA+98816" target="_blank" class="map-btn">
-                🗺️ View Day 2 Map & Driving Directions
+            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=102+Waterslide+Dr,+Chelan,+WA+98816+to:116+S+Emerson+St,+Chelan,+WA+98816" target="_blank" class="map-btn">
+                🗺️ View Saturday Map & Driving Directions
             </a>
         </div>
 
         <!-- Day 3 Plan -->
         <div class="day-section">
             <div class="day-header">
-                <div class="day-title">Day 3: Lakeside Parks & Head Home</div>
-                <div class="day-subtitle">Beach Fun & Farewell</div>
+                <div class="day-title">Day 3 (Sunday): Relaxed Beach & Putting Greens</div>
+                <div class="day-subtitle">Easy-Going Family Day</div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-time">10:00 AM</div>
+                    <div class="timeline-time">10:30 AM</div>
                     <div class="timeline-content">
                         <h4>Don Morse Memorial Park (485 W Manson Hwy)</h4>
-                        <p>Check out of your rental and head down to the lake. This premier park offers sandy beaches, fantastic playgrounds, clear swimming areas, and an 18-hole natural turf putting course that's fun for all ages.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-time">12:30 PM</div>
-                    <div class="timeline-content">
-                        <h4>Downtown Lunch</h4>
-                        <p>Grab a relaxed family bite or pick up deli sandwiches in downtown Chelan before hitting the road.</p>
+                        <p>An easy, slow morning. Pack a picnic and head down to the premier sandy beach on the lake. The kids can swim in the protected shallow areas or enjoy the large playground structures.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">2:00 PM</div>
                     <div class="timeline-content">
-                        <h4>Drive back to Bellevue</h4>
-                        <p>Head southwest back over the mountain passes, ensuring a smooth ride home.</p>
+                        <h4>18-Hole Natural Putting Course</h4>
+                        <p>Located right inside Don Morse Park, play a relaxed round on the 18-hole grass putting course. It's scaled perfectly for children and incredibly low stress.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">6:00 PM</div>
+                    <div class="timeline-content">
+                        <h4>Barbecue or Community Pool Chill</h4>
+                        <p>Head back up to Porcupine Lane. Take advantage of your home base to grill dinner or splash in the Lookout community neighborhood pool to wrap up the weekend.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=485+W+Manson+Hwy,+Chelan,+WA+98816" target="_blank" class="map-btn">
+                🗺️ View Sunday Map & Driving Directions
+            </a>
+        </div>
+
+        <!-- Day 4 Plan -->
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-title">Day 4 (Monday): Checkout & Drive Home</div>
+                <div class="day-subtitle">Heading Back to Bellevue</div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">11:00 AM</div>
+                    <div class="timeline-content">
+                        <h4>Check-out of Rental Basecamp</h4>
+                        <p>Finish packing bags, load up the car, and check out of 255 Porcupine Lane right at 11:00 AM.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">12:00 PM</div>
+                    <div class="timeline-content">
+                        <h4>Brunch or Early Lunch Downtown</h4>
+                        <p>Grab a comfortable meal at a local cafe or bakery in downtown Chelan before hitting the road.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">1:30 PM</div>
+                    <div class="timeline-content">
+                        <h4>Departure from Lake Chelan</h4>
+                        <p>Begin the drive back over the Cascade passes towards King County, hitting the highway when the kids are ready for an afternoon nap.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">5:00 PM</div>
                     <div class="timeline-content">
-                        <h4>Arrive in Bellevue</h4>
-                        <p>Arrive home in Bellevue with wonderful memories and plenty of time to unpack before the night.</p>
+                        <h4>Arrival in Bellevue</h4>
+                        <p>Arrive home safely in Bellevue by 5:00 PM with plenty of evening left to unwind before the week starts.</p>
                     </div>
                 </div>
             </div>
-            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=485+W+Manson+Hwy,+Chelan,+WA+98816+to:Bellevue,+WA" target="_blank" class="map-btn">
-                🗺️ View Day 3 Map & Driving Directions
+            <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=Bellevue,+WA" target="_blank" class="map-btn">
+                🗺️ View Monday Map & Return Directions
             </a>
         </div>
 
     </div>
 
     <footer>
-        <p>Created for our family trip to Lake Chelan. Have an amazing vacation!</p>
+        <p>Created for our family trip to Lake Chelan. Have an amazing weekend vacation!</p>
     </footer>
 
 </body>
