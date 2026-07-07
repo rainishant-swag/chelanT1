@@ -31,6 +31,29 @@
             line-height: 1.6;
         }
 
+        nav {
+            background-color: var(--primary);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
         header {
             background: linear-gradient(rgba(30, 61, 89, 0.85), rgba(30, 61, 89, 0.95)), 
                         url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
@@ -114,17 +137,13 @@
             gap: 0.4rem;
         }
 
-        .badge {
-            background-color: var(--accent);
-            color: white;
-            font-size: 0.75rem;
-            padding: 0.1rem 0.4rem;
-            border-radius: 4px;
-            font-weight: bold;
+        .store-name a {
+            color: var(--primary);
+            text-decoration: underline;
         }
 
-        .ev-badge {
-            background-color: var(--ev-color);
+        .badge {
+            background-color: var(--accent);
             color: white;
             font-size: 0.75rem;
             padding: 0.1rem 0.4rem;
@@ -163,6 +182,7 @@
             border-bottom: 2px solid #eeeeee;
             padding-bottom: 0.75rem;
             margin-bottom: 1.5rem;
+            gap: 1rem;
         }
 
         .day-title {
@@ -222,6 +242,11 @@
             margin-bottom: 0.25rem;
         }
 
+        .timeline-content h4 a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
         .timeline-content p {
             color: var(--text-light);
             font-size: 0.95rem;
@@ -247,19 +272,6 @@
             transform: translateY(-1px);
         }
 
-        .map-btn:active {
-            transform: translateY(0);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 3rem;
-        }
-
         @media (max-width: 600px) {
             header h1 { font-size: 2rem; }
             .day-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
@@ -268,6 +280,11 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="index.html" class="active">📅 Main Itinerary</a>
+        <a href="funoption.html">🛶 Extra Fun Options</a>
+    </nav>
 
     <header>
         <h1>Lake Chelan Family Weekend</h1>
@@ -282,17 +299,17 @@
                 <h2>📍 Trip Basecamp</h2>
                 <p><strong>Address:</strong><br>255 Porcupine Lane<br>Chelan, WA 98816</p>
                 <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-light);">
-                    Located inside <em>The Lookout at Lake Chelan</em> community. Enjoy community parks, shared pools, and kid-friendly walking trails right outside your door.
+                    Located inside <a href="https://www.thelookoutchelan.com/" target="_blank" style="color: var(--primary);">The Lookout at Lake Chelan</a> community. Enjoy community parks, shared pools, and kid-friendly walking trails.
                 </p>
             </div>
 
             <!-- EV Charging Card -->
             <div class="card ev-card">
                 <h2>⚡ Pitstop Supercharger</h2>
-                <p><strong>Cle Elum Supercharger (V3 - 250kW)</strong></p>
+                <p><strong><a href="https://www.tesla.com/findus" target="_blank" style="color: var(--ev-color);">Cle Elum Supercharger (V3)</a></strong></p>
                 <p class="store-meta"><strong>Address:</strong> 808 W Davis St, Cle Elum, WA 98922</p>
                 <p class="store-meta" style="margin-top: 0.5rem; color: var(--text-dark);">
-                    Perfect middle-ground stretch point for your Model Y Long Range starting at 80%. Located at Gravity Coffee with a drive-thru, clean restrooms, and open walking space for the kids to stretch out.
+                    Located at <a href="https://gravitycoffee.com/" target="_blank" style="color: var(--ev-color);">Gravity Coffee</a> with convenient restrooms and open walking space for the kids to shake off car jitters.
                 </p>
             </div>
 
@@ -301,17 +318,14 @@
                 <h2>🛒 Grocery & Dining</h2>
                 <ul class="store-list">
                     <li class="store-item">
-                        <div class="store-name">Safeway <span class="store-meta">(1.9 mi)</span></div>
+                        <div class="store-name"><a href="https://www.safeway.com" target="_blank">Safeway</a> <span class="store-meta">(1.9 mi)</span></div>
                         <div class="store-meta">106 W Manson Rd • Standard groceries & deli items.</div>
                     </li>
                     <li class="store-item">
-                        <div class="store-name">Twisted Cork & Taphouse <span class="badge">Indian Menu</span></div>
-                        <div class="store-meta">116 S Emerson St • 1.8 miles away. Offers a fantastic authentic Indian menu alongside a kids' food menu.</div>
+                        <div class="store-name"><a href="https://twistedcorkandtaphouse.com/" target="_blank">Twisted Cork & Taphouse</a> <span class="badge">Indian Menu</span></div>
+                        <div class="store-meta">116 S Emerson St • 1.8 miles away. Offers an authentic Indian menu alongside an excellent kids' menu.</div>
                     </li>
                 </ul>
-                <div class="pro-tip">
-                    <strong>💡 Indian Grocery Note:</strong> There are no physical Indian grocery stores in Chelan. Pack your preferred specialty spices or dals from Bellevue before departing at 1:00 PM!
-                </div>
             </div>
         </div>
 
@@ -327,36 +341,36 @@
                     <div class="timeline-time">1:00 PM</div>
                     <div class="timeline-content">
                         <h4>Departure from Bellevue</h4>
-                        <p>Depart early Friday afternoon via I-90 E with your Model Y Long Range charged up to 80%. Enjoy the scenic ascent up Snoqualmie Pass.</p>
+                        <p>Depart via I-90 E with your Model Y Long Range charged to 80%.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker ev-marker"></div>
                     <div class="timeline-time">2:15 PM</div>
                     <div class="timeline-content">
-                        <h4>⚡ EV Charging & Stretch in Cle Elum (808 W Davis St)</h4>
-                        <p>Pull into the V3 Supercharger station. Take a 15-minute break to stretch, grab a quick drink at Gravity Coffee, and top your battery back up comfortably to cruise over to Chelan.</p>
+                        <h4>⚡ EV Charging & Stretch at <a href="https://gravitycoffee.com/" target="_blank">Gravity Coffee Supercharger</a></h4>
+                        <p>Pull in for a 15-minute top-up while grabbing a refreshing drink.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">4:45 PM</div>
                     <div class="timeline-content">
-                        <h4>Check-in & Quick Grocery Restock</h4>
-                        <p>Arrive at 255 Porcupine Lane to check into your vacation rental. Swing by Safeway or Chelan Market Fresh to pick up breakfast foods, milk, and snacks for the kids.</p>
+                        <h4>Check-in & Safeway Run</h4>
+                        <p>Arrive at Porcupine Lane and swing by <a href="https://www.safeway.com" target="_blank">Safeway</a> for breakfast foods and kids' snacks.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">6:30 PM</div>
                     <div class="timeline-content">
-                        <h4>Sunset Walk at Chelan Riverwalk Park</h4>
-                        <p>Head to 117 E Wapato Ave. Stretch your legs on a beautiful, flat 1-mile loop trail along the river. Great fields for the kids to run around on after the drive.</p>
+                        <h4>Sunset Walk at <a href="https://cityofchelan.us" target="_blank">Chelan Riverwalk Park</a></h4>
+                        <p>Head to 117 E Wapato Ave. Enjoy a flat, scenic 1-mile loop trail along the water layout.</p>
                     </div>
                 </div>
             </div>
             <a href="https://maps.google.com/?saddr=Bellevue,+WA&daddr=808+W+Davis+St,+Cle+Elum,+WA+98922+to:255+Porcupine+Lane,+Chelan,+WA+98816+to:106+W+Manson+Rd,+Chelan,+WA+98816+to:117+E+Wapato+Ave,+Chelan,+WA+98816" target="_blank" class="map-btn">
-                🗺️ View Friday Map & Driving Directions (Via Supercharger)
+                🗺️ View Friday Map & Driving Directions
             </a>
         </div>
 
@@ -369,26 +383,18 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-time">9:30 AM</div>
-                    <div class="timeline-content">
-                        <h4>Pack the Beach Bags</h4>
-                        <p>Get the kids ready with sunblock, water shoes, and towels for a high-energy day at the park.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
                     <div class="timeline-time">10:00 AM</div>
                     <div class="timeline-content">
-                        <h4>Slidewaters (102 Waterslide Dr)</h4>
-                        <p>Spend the day enjoying the massive water park overlooking the lake. Features an incredible lazy river, safety-first splash zones for younger children, and thrilling tube slides. Rent a locker on-site or grab snacks at the concession stands.</p>
+                        <h4><a href="https://www.slidewaters.com/" target="_blank">Slidewaters Water Park</a> (102 Waterslide Dr)</h4>
+                        <p>Spend the day enjoying tube slides, a lazy river, and splash zones built safely for toddlers.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">5:30 PM</div>
                     <div class="timeline-content">
-                        <h4>Dinner at Twisted Cork & Taphouse</h4>
-                        <p>Head downtown to 116 S Emerson St. After a big swimming day, enjoy premium Indian dishes like Tikka Masala or Samosas, while keeping things simple for the kids with their dedicated kids' menu selections.</p>
+                        <h4>Dinner at <a href="https://twistedcorkandtaphouse.com/" target="_blank">Twisted Cork & Taphouse</a></h4>
+                        <p>Head downtown to refuel on great Indian plates while the kids select from their dedicated kids' plates.</p>
                     </div>
                 </div>
             </div>
@@ -408,24 +414,16 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">10:30 AM</div>
                     <div class="timeline-content">
-                        <h4>Don Morse Memorial Park (485 W Manson Hwy)</h4>
-                        <p>An easy, slow morning. Pack a picnic and head down to the premier sandy beach on the lake. The kids can swim in the protected shallow areas or enjoy the large playground structures.</p>
+                        <h4>Beach Day at <a href="https://cityofchelan.us/264/Don-Morse-Park" target="_blank">Don Morse Memorial Park</a></h4>
+                        <p>Relax on the pristine sandy waterfront beach featuring a protected swim layout and massive playground structure.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">2:00 PM</div>
                     <div class="timeline-content">
-                        <h4>18-Hole Natural Putting Course</h4>
-                        <p>Located right inside Don Morse Park, play a relaxed round on the 18-hole grass putting course. It's scaled perfectly for children and incredibly low stress.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-time">6:00 PM</div>
-                    <div class="timeline-content">
-                        <h4>Barbecue or Community Pool Chill</h4>
-                        <p>Head back up to Porcupine Lane. Take advantage of your home base to grill dinner or splash in the Lookout community neighborhood pool to wrap up the weekend.</p>
+                        <h4>18-Hole Natural Putting Green</h4>
+                        <p>Enjoy a relaxed family round of mini-golf right inside the park perimeter.</p>
                     </div>
                 </div>
             </div>
@@ -445,37 +443,13 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-time">11:00 AM</div>
                     <div class="timeline-content">
-                        <h4>Check-out of Rental Basecamp</h4>
-                        <p>Finish packing bags, load up the car, and check out of 255 Porcupine Lane right at 11:00 AM. Ensure your Model Y is prepped with an 80% charge baseline.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-time">12:00 PM</div>
-                    <div class="timeline-content">
-                        <h4>Brunch or Early Lunch Downtown</h4>
-                        <p>Grab a comfortable meal at a local cafe or bakery in downtown Chelan before hitting the road.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker ev-marker"></div>
-                    <div class="timeline-time">3:15 PM</div>
-                    <div class="timeline-content">
-                        <h4>⚡ EV Top-up Stop in Cle Elum (808 W Davis St)</h4>
-                        <p>Stop over at the Cle Elum V3 supercharger again to give everyone a quick legs stretch, washroom break, and ensure you drop back down into Bellevue with tons of battery buffer.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-time">5:00 PM</div>
-                    <div class="timeline-content">
-                        <h4>Arrival in Bellevue</h4>
-                        <p>Arrive home safely in Bellevue by 5:00 PM with plenty of evening left to unwind before the week starts.</p>
+                        <h4>Check-out & Head Home</h4>
+                        <p>Load up the Model Y and head back towards Cle Elum and Bellevue.</p>
                     </div>
                 </div>
             </div>
             <a href="https://maps.google.com/?saddr=255+Porcupine+Lane,+Chelan,+WA+98816&daddr=808+W+Davis+St,+Cle+Elum,+WA+98922+to:Bellevue,+WA" target="_blank" class="map-btn">
-                🗺️ View Monday Map & Return Directions (Via Supercharger)
+                🗺️ View Monday Map & Return Directions
             </a>
         </div>
 
