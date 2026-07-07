@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Chelan - Extra Fun, Boats & Restaurants</title>
+    <style>
+        :root {
+            --primary: #1e3d59;
+            --secondary: #17b978;
+            --accent: #ff6f3c;
+            --background: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --highlight: #fff3cd;
+            --fun-purple: #6f42c1;
+            --park-green: #28a745;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--primary);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        header {
+            background: linear-gradient(rgba(111, 66, 193, 0.85), rgba(30, 61, 89, 0.95)), 
+                        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem 1rem;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .option-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 5px solid var(--primary);
+        }
+
+        .option-card.boat { border-left-color: #0088cc; }
+        .option-card.food { border-left-color: var(--accent); }
+        .option-card.activity { border-left-color: var(--fun-purple); }
+        .option-card.park { border-left-color: var(--park-green); }
+
+        .option-header h3 a {
+            color: var(--text-dark);
+            text-decoration: underline;
+        }
+
+        .option-header h3 a:hover {
+            color: var(--primary);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .tag.boat-tag { background-color: #0088cc; }
+        .tag.food-tag { background-color: var(--accent); }
+        .tag.activity-tag { background-color: var(--fun-purple); }
+        .tag.park-tag { background-color: var(--park-green); }
+
+        .option-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta-details {
+            font-size: 0.9rem;
+            background-color: var(--background);
+            padding: 0.75rem;
+            border-radius: 6px;
+            margin-top: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">📅 Main Itinerary</a>
+        <a href="funoption.html" class="active">🛶 Extra Fun Options</a>
+    </nav>
+
+    <header>
+        <h1>Lake Chelan Hidden Gems</h1>
+        <p>Explore More: Watercraft Rentals, Family Activities & Post-Fun Dining</p>
+    </header>
+
+    <div class="container">
+
+        <!-- NEW TOLLDER PICNIC PARKS SECTION -->
+        <h2 class="section-title">🧺 Toddler-Friendly Picnic Parks</h2>
+        <div class="grid">
+            <div class="option-card park">
+                <div class="option-header">
+                    <span class="tag park-tag">Shade Trees & Playground</span>
+                    <h3><a href="https://cityofchelan.us/264/Don-Morse-Park" target="_blank">Don Morse Memorial Park</a></h3>
+                    <p class="option-desc">Spanning 40 waterfront acres, it is perfect for small kids. It offers a dedicated children's playground, massive open lawns with shade trees, and a protected, shallow swimming zone.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Amenities:</strong> Kiosk parking, restrooms, sandy zero-entry beach lines.</p>
+                </div>
+            </div>
+
+            <div class="option-card park">
+                <div class="option-header">
+                    <span class="tag park-tag">Quieter Beach Setting</span>
+                    <h3><a href="https://cityofchelan.us" target="_blank">Lakeside Park</a></h3>
+                    <p class="option-desc">A beautiful 10-acre neighborhood park located in the historic Lakeside community. Features expansive grassy lawns under beautiful mature shade trees, keeping toddlers protected from high midday heat.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Amenities:</strong> Playground, restrooms, picnic tables, and clear shallow swimming bays.</p>
+                </div>
+            </div>
+
+            <div class="option-card park">
+                <div class="option-header">
+                    <span class="tag park-tag">Manson Waterfront</span>
+                    <h3><a href="https://www.moretomanson.com" target="_blank">Manson Bay Park</a></h3>
+                    <p class="option-desc">Located just up the road in downtown Manson. Features an expansive lush green lawn hitting the waterfront dock perimeter, pristine benches, and immediate access to toddler walking lines.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Amenities:</strong> Playground across the street, beach safety lines, nearby cafes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOAT & KAYAK RENTALS SECTION -->
+        <h2 class="section-title">🛶 Boat, Kayak, & Jet Ski Rentals</h2>
+        <div class="grid">
+            <div class="option-card boat">
+                <div class="option-header">
+                    <span class="tag boat-tag">South Shore Base</span>
+                    <h3><a href="https://www.facebook.com/lakeshoreswatercraft/" target="_blank">Lake Shores Watercraft Rentals</a></h3>
+                    <p class="option-desc">Highly rated family outfit located close to Slidewaters. Perfect for a streamlined logistics day out on the water.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Fleet:</strong> Powerboats, Jet Skis, Paddleboards, Single/Double Kayaks</p>
+                </div>
+            </div>
+
+            <div class="option-card boat">
+                <div class="option-header">
+                    <span class="tag boat-tag">Downtown Fleet</span>
+                    <h3><a href="https://www.shorelinewatercraft.com/" target="_blank">Shoreline Watercraft</a></h3>
+                    <p class="option-desc">Boasts one of the largest premier rental fleets located directly within the marina hub. Turn-key boats ready to go.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Fleet:</strong> Pontoons, Luxury open-bows, Starcraft deck boats</p>
+                </div>
+            </div>
+
+            <div class="option-card boat">
+                <div class="option-header">
+                    <span class="tag boat-tag">Parasail & Speed</span>
+                    <h3><a href="https://www.chelanparasail.com/" target="_blank">Chelan Parasail & Watercraft</a></h3>
+                    <p class="option-desc">Over 30 years of local service. A fantastic choice for speedboats, waverunners, or high-flying parasailing options.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Fleet:</strong> Ski Boats, WaveRunners, Parasail packages</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MORE FUN ACTIVITIES SECTION -->
+        <h2 class="section-title">🎡 Extra Family Fun Activities</h2>
+        <div class="grid">
+            <div class="option-card activity">
+                <div class="option-header">
+                    <span class="tag activity-tag">Scenic Day Trip</span>
+                    <h3><a href="https://ladyofthelake.com/" target="_blank">Lady of the Lake Ferry Tour</a></h3>
+                    <p class="option-desc">Take a stunning passenger ferry cruise deep into the 55-mile fjord where roads can't reach.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Activity:</strong> Cruising and day-tripping up to remote Stehekin.</p>
+                </div>
+            </div>
+
+            <div class="option-card activity">
+                <div class="option-header">
+                    <span class="tag activity-tag">Historic Fun</span>
+                    <h3><a href="https://www.rubytheatre.com/" target="_blank">The Ruby Theatre</a></h3>
+                    <p class="option-desc">The oldest operating cinema in WA (1914) featuring a grand character design. Great for hot afternoons.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Activity:</strong> Catching a relaxed family movie layout.</p>
+                </div>
+            </div>
+
+            <div class="option-card activity">
+                <div class="option-header">
+                    <span class="tag activity-tag">High Ropes</span>
+                    <h3><a href="https://www.slidewaters.com/hightrek" target="_blank">High Trek Chelan</a></h3>
+                    <p class="option-desc">Located right adjacent to the Slidewaters complex, this keeps family members active up in the air.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Activity:</strong> Aerial obstacle climbing courses and ziplines.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GOOD POST-ACTIVITY RESTAURANTS -->
+        <h2 class="section-title">🍕 Family Restaurants For After The Fun</h2>
+        <div class="grid">
+            <div class="option-card food">
+                <div class="option-header">
+                    <span class="tag food-tag">Manson Farm-to-Table</span>
+                    <h3><a href="https://www.wafflesonthehill.com/" target="_blank">Blueberry Hills Farm</a></h3>
+                    <p class="option-desc">A welcoming 20-acre scratch-kitchen experience. Ranked as a top destination layout in Washington State.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Food:</strong> Famous yeast waffles, massive burgers, fresh scratch fruit pies.</p>
+                </div>
+            </div>
+
+            <div class="option-card food">
+                <div class="option-header">
+                    <span class="tag food-tag">Downtown Craft Pizza</span>
+                    <h3><a href="https://www.localmythpizza.com/" target="_blank">Local Myth Pizza</a></h3>
+                    <p class="option-desc">A local institution serving fresh-tossed artisanal pies, signature kids' builds, and custom giant calzones.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Food:</strong> Craft pizzas, gluten-free crust options, artisan dips.</p>
+                </div>
+            </div>
+
+            <div class="option-card food">
+                <div class="option-header">
+                    <span class="tag food-tag">Scratch Americana</span>
+                    <h3><a href="https://www.countylinechelan.com/" target="_blank">County Line Chelan</a></h3>
+                    <p class="option-desc">A casual restaurant right on Woodin Ave serving locally sourced high-quality items on a family patio setup.</p>
+                </div>
+                <div class="meta-details">
+                    <p><strong>Food:</strong> Street tacos, gourmet handheld sandwiches, fresh salads.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Make the most of the sun and water! Have an incredible weekend vacation.</p>
+    </footer>
+
+</body>
+</html>
